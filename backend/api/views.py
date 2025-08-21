@@ -5,6 +5,9 @@ from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
+from django.db.models import Sum, F
+from collections import defaultdict
 
 from api.models import Recipe, Tag, Ingredient, Follow, Favorite, ShoppingCart, IngredientInRecipe
 from api.serializers import (
@@ -58,18 +61,15 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         logger.debug(f"PERFORM_CREATE - Saving recipe for user: {self.request.user}")
-        # Уберите передачу author, так как он уже устанавливается в сериализаторе
         serializer.save()
 
     def create(self, request, *args, **kwargs):
         logger.debug(f"CREATE VIEW - Request data: {request.data}")
 
-        # Используем WriteSerializer для создания
         write_serializer = self.get_serializer(data=request.data)
         write_serializer.is_valid(raise_exception=True)
         instance = write_serializer.save()
 
-        # Используем ReadSerializer для ответа
         read_serializer = RecipeReadSerializer(instance, context={'request': request})
 
         headers = self.get_success_headers(read_serializer.data)
@@ -95,7 +95,53 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'], url_path='download_shopping_cart')
     def download_shopping_cart(self, request):
-        return Response({'status': 'download shopping cart'}, status=status.HTTP_200_OK)
+        """Скачать список покупок в формате TXT с красивым форматированием"""
+        shopping_cart_recipes = ShoppingCart.objects.filter(
+            user=request.user
+        ).values_list('recipe', flat=True)
+
+        ingredients = IngredientInRecipe.objects.filter(
+            recipe__in=shopping_cart_recipes
+        ).values(
+            'ingredient__name',
+            'ingredient__unit_of_measurement'
+        ).annotate(
+            total_amount=Sum('amount')
+        ).order_by('ingredient__name')
+
+        lines = []
+        lines.append("СПИСОК ПОКУПОК")
+        lines.append("")
+        lines.append("Ингредиенты:")
+        lines.append("-" * 40)
+
+        for i, ingredient in enumerate(ingredients, 1):
+            name = ingredient['ingredient__name']
+            unit = ingredient['ingredient__unit_of_measurement']
+            amount = ingredient['total_amount']
+            lines.append(f"{i:2d}. {name} ({unit}) — {amount}")
+
+        lines.append("-" * 40)
+        lines.append(f"Всего: {len(ingredients)} ингредиентов")
+
+        text_content = "\n".join(lines)
+
+        response = HttpResponse(text_content, content_type='text/plain; charset=utf-8')
+        response['Content-Disposition'] = 'attachment; filename="shopping_list.txt"'
+
+        return response
+
+    @action(detail=True, methods=['get'], url_path='get-link')
+    def get_link(self, request, pk=None):
+        recipe = get_object_or_404(Recipe, pk=pk)
+        try:
+            image_url = request.build_absolute_uri(recipe.image.url) if recipe.image else None
+        except:
+            image_url = None
+
+        return Response({
+            'url': image_url
+        }, status=status.HTTP_200_OK)
 
 
 class CustomUserViewSet(viewsets.ModelViewSet):
@@ -107,6 +153,11 @@ class CustomUserViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             return [permissions.AllowAny()]
         return super().get_permissions()
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
     @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
     def me(self, request):
@@ -193,35 +244,46 @@ class CustomUserViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['post', 'delete'], url_path='subscribe')
     def subscribe(self, request, pk=None):
+        """Умный метод подписки/отписки"""
         author = get_object_or_404(CustomUser, pk=pk)
 
+        if request.user == author:
+            return Response(
+                {'error': 'Cannot subscribe to yourself'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Проверяем существующую подписку
+        follow_exists = Follow.objects.filter(user=request.user, author=author).exists()
+
         if request.method == 'POST':
-            if request.user == author:
+            if follow_exists:
+                # Если уже подписан - возвращаем успех вместо ошибки
                 return Response(
-                    {'error': 'Cannot subscribe to yourself'},
-                    status=status.HTTP_400_BAD_REQUEST
+                    {'status': 'already subscribed', 'message': 'Already subscribed to this user'},
+                    status=status.HTTP_200_OK
                 )
 
-            # Проверяем существующую подписку
-            if Follow.objects.filter(user=request.user, author=author).exists():
-                return Response(
-                    {'error': 'Already subscribed to this user'},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-
-            # Создаем подписку напрямую, без сериализатора
+            # Создаем подписку
             follow = Follow.objects.create(user=request.user, author=author)
-            
-            # Возвращаем информацию о подписке
             return Response(
                 {'status': 'subscribed', 'follow_id': follow.id},
                 status=status.HTTP_201_CREATED
             )
-
+        
         else:  # DELETE
+            if not follow_exists:
+                # Если не подписан - возвращаем ошибку
+                return Response(
+                    {'error': 'Not subscribed to this user'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Удаляем подписку
             follow = get_object_or_404(Follow, user=request.user, author=author)
             follow.delete()
-            return Response({'status': 'unsubscribed'}, status=status.HTTP_204_NO_CONTENT)
+            return Response({'status': 'unsubscribed'}, status=status.HTTP_200_OK)
+        
 
 class TagViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Tag.objects.all()

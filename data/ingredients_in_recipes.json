@@ -1,0 +1,812 @@
+[
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 1,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 2153,
+            "amount": 236
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 2,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 2137,
+            "amount": 228
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 3,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 1059,
+            "amount": 206
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 4,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 14,
+            "amount": 289
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 5,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 851,
+            "amount": 281
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 6,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 254,
+            "amount": 137
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 7,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 8,
+            "amount": 180
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 8,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 844,
+            "amount": 187
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 9,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 28,
+            "amount": 63
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 10,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 7,
+            "amount": 149
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 11,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 79,
+            "amount": 106
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 12,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 1162,
+            "amount": 91
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 13,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 851,
+            "amount": 118
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 14,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 1528,
+            "amount": 240
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 15,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 330,
+            "amount": 240
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 16,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 699,
+            "amount": 144
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 17,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 334,
+            "amount": 112
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 18,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 828,
+            "amount": 116
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 19,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 83,
+            "amount": 296
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 20,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 12,
+            "amount": 227
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 21,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 2055,
+            "amount": 282
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 22,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 11,
+            "amount": 254
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 23,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 1162,
+            "amount": 276
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 24,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 1801,
+            "amount": 261
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 25,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 149,
+            "amount": 52
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 26,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 1344,
+            "amount": 70
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 27,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 79,
+            "amount": 182
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 28,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 1386,
+            "amount": 50
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 29,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 1836,
+            "amount": 108
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 30,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 2092,
+            "amount": 147
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 31,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 35,
+            "amount": 211
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 32,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 41,
+            "amount": 229
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 33,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 649,
+            "amount": 82
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 34,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 1032,
+            "amount": 167
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 35,
+        "fields": {
+            "recipe": 7,
+            "ingredient": 1633,
+            "amount": 68
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 36,
+        "fields": {
+            "recipe": 8,
+            "ingredient": 43,
+            "amount": 244
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 37,
+        "fields": {
+            "recipe": 8,
+            "ingredient": 960,
+            "amount": 294
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 38,
+        "fields": {
+            "recipe": 8,
+            "ingredient": 1483,
+            "amount": 216
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 39,
+        "fields": {
+            "recipe": 9,
+            "ingredient": 64,
+            "amount": 90
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 40,
+        "fields": {
+            "recipe": 9,
+            "ingredient": 1162,
+            "amount": 182
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 41,
+        "fields": {
+            "recipe": 9,
+            "ingredient": 851,
+            "amount": 92
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 42,
+        "fields": {
+            "recipe": 9,
+            "ingredient": 2055,
+            "amount": 115
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 43,
+        "fields": {
+            "recipe": 9,
+            "ingredient": 1168,
+            "amount": 156
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 44,
+        "fields": {
+            "recipe": 10,
+            "ingredient": 1713,
+            "amount": 64
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 45,
+        "fields": {
+            "recipe": 10,
+            "ingredient": 1344,
+            "amount": 159
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 46,
+        "fields": {
+            "recipe": 10,
+            "ingredient": 79,
+            "amount": 76
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 47,
+        "fields": {
+            "recipe": 10,
+            "ingredient": 1210,
+            "amount": 246
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 48,
+        "fields": {
+            "recipe": 10,
+            "ingredient": 1633,
+            "amount": 65
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 49,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 298,
+            "amount": 144
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 50,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 618,
+            "amount": 202
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 51,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 936,
+            "amount": 131
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 52,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 483,
+            "amount": 181
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 53,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 1106,
+            "amount": 208
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 54,
+        "fields": {
+            "recipe": 11,
+            "ingredient": 1971,
+            "amount": 208
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 55,
+        "fields": {
+            "recipe": 12,
+            "ingredient": 483,
+            "amount": 215
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 56,
+        "fields": {
+            "recipe": 12,
+            "ingredient": 1,
+            "amount": 100
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 57,
+        "fields": {
+            "recipe": 12,
+            "ingredient": 336,
+            "amount": 253
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 58,
+        "fields": {
+            "recipe": 13,
+            "ingredient": 780,
+            "amount": 139
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 59,
+        "fields": {
+            "recipe": 13,
+            "ingredient": 43,
+            "amount": 234
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 60,
+        "fields": {
+            "recipe": 13,
+            "ingredient": 463,
+            "amount": 163
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 61,
+        "fields": {
+            "recipe": 13,
+            "ingredient": 991,
+            "amount": 108
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 62,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 1528,
+            "amount": 220
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 63,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 7,
+            "amount": 96
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 64,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 334,
+            "amount": 232
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 65,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 583,
+            "amount": 272
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 66,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 991,
+            "amount": 109
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 67,
+        "fields": {
+            "recipe": 14,
+            "ingredient": 314,
+            "amount": 138
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 68,
+        "fields": {
+            "recipe": 15,
+            "ingredient": 43,
+            "amount": 135
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 69,
+        "fields": {
+            "recipe": 15,
+            "ingredient": 26,
+            "amount": 139
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 70,
+        "fields": {
+            "recipe": 15,
+            "ingredient": 960,
+            "amount": 290
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 71,
+        "fields": {
+            "recipe": 15,
+            "ingredient": 413,
+            "amount": 252
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 72,
+        "fields": {
+            "recipe": 16,
+            "ingredient": 1777,
+            "amount": 217
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 73,
+        "fields": {
+            "recipe": 16,
+            "ingredient": 1344,
+            "amount": 271
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 74,
+        "fields": {
+            "recipe": 16,
+            "ingredient": 435,
+            "amount": 91
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 75,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 26,
+            "amount": 62
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 76,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 618,
+            "amount": 240
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 77,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 47,
+            "amount": 263
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 78,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 598,
+            "amount": 145
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 79,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 991,
+            "amount": 234
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 80,
+        "fields": {
+            "recipe": 17,
+            "ingredient": 817,
+            "amount": 158
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 81,
+        "fields": {
+            "recipe": 18,
+            "ingredient": 5,
+            "amount": 294
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 82,
+        "fields": {
+            "recipe": 18,
+            "ingredient": 175,
+            "amount": 95
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 83,
+        "fields": {
+            "recipe": 18,
+            "ingredient": 1081,
+            "amount": 99
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 84,
+        "fields": {
+            "recipe": 19,
+            "ingredient": 83,
+            "amount": 288
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 85,
+        "fields": {
+            "recipe": 19,
+            "ingredient": 1674,
+            "amount": 129
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 86,
+        "fields": {
+            "recipe": 19,
+            "ingredient": 766,
+            "amount": 169
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 87,
+        "fields": {
+            "recipe": 20,
+            "ingredient": 1059,
+            "amount": 176
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 88,
+        "fields": {
+            "recipe": 20,
+            "ingredient": 39,
+            "amount": 70
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 89,
+        "fields": {
+            "recipe": 20,
+            "ingredient": 270,
+            "amount": 237
+        }
+    },
+    {
+        "model": "api.ingredientinrecipe",
+        "pk": 90,
+        "fields": {
+            "recipe": 20,
+            "ingredient": 47,
+            "amount": 114
+        }
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "model": "api.images",
+        "pk": 1,
+        "fields": {
+            "image": "media/recipes/image/Солнечный остров.webp",
+            "slug": "Джемовое облако"
+        }
+    }
+]
