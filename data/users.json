@@ -8,7 +8,25 @@
             "password": "pbkdf2_sha256$216000$example$examplehash",
             "is_superuser": true,
             "is_staff": true,
-            "is_active": true
+            "is_active": true,
+            "first_name": "Admin",
+            "last_name": "User",
+            "date_joined": "2023-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "users.CustomUser",
+        "pk": 2,
+        "fields": {
+            "username": "Александр Кузьмичев",
+            "email": "7807426@mail.ru",
+            "password": "Kuzia_26148",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true,
+            "first_name": "Александр",
+            "last_name": "Кузьмичев",
+            "date_joined": "2023-01-01T12:00:00Z"
         }
     }
 ]
