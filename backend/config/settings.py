@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB', 'foodgram_db'),
+        'NAME': os.getenv('POSTGRES_DB', 'foodgram_dt'),
         'USER': os.getenv('POSTGRES_USER', 'postgres'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'Kuzia_26148'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': os.getenv('DB_PORT', '5432'),
     }
@@ -191,12 +191,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR.parent / 'frontend/build/static',  # твоя текущая структура
+    BASE_DIR.parent / 'frontend/build/static',  # текущая структура
 ]
 STATIC_ROOT = BASE_DIR / 'static'
 
 TEMPLATES[0]['DIRS'] = [
-    BASE_DIR / 'templates',  # только твои шаблоны
+    BASE_DIR / 'templates',  # только шаблоны
 ]
 
 # Default primary key field type
