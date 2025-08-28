@@ -2,12 +2,18 @@ FROM python:3.9
 
 WORKDIR /app
 
-RUN pip install gunicorn==20.1.0
+RUN apt-get update && apt-get install -y \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt  .
+COPY requirements.txt .
 
-RUN pip install -r requirements.txt --no-cache-dir
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY backend/ .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8005", "config.wsgi"]
+RUN mkdir -p static media
+
+RUN python manage.py collectstatic --noinput
+
+CMD ["sh", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8005 --workers 3 config.wsgi:application"]
