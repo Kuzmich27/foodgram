@@ -4,6 +4,7 @@ asgiref==3.8.1
 sqlparse==0.5.3
 
 # Database
+djoser
 psycopg2-binary==2.9.9
 
 # Authentication
@@ -29,7 +30,7 @@ attrs==25.3.0
 colorama==0.4.6
 iniconfig==2.1.0
 packaging==25.0
-pluggy==0.13.1
+pluggy>=1.5,<2.0
 py==1.11.0
 toml==0.10.2
 typing_extensions==4.13.2
